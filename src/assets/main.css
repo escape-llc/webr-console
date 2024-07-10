@@ -1,0 +1,29 @@
+@import './base.css';
+
+#app {
+	display:flex;
+	position: absolute;
+	left:0;right:0;top:0;bottom:0;
+	background-color: aliceblue;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-items: stretch;
+	align-items: stretch;
+	justify-content: stretch;
+	margin: 0 auto;
+	padding: .2rem;
+	overflow: hidden;
+	font-weight: normal;
+}
+a,
+.green {
+	text-decoration: none;
+	color: hsla(160, 100%, 37%, 1);
+	transition: 0.4s;
+}
+
+@media (hover: hover) {
+	a:hover {
+		background-color: hsla(160, 100%, 37%, 0.2);
+	}
+}
