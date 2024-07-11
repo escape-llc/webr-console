@@ -8,6 +8,7 @@ const version = require("./package.json").version || 0
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	base: "",
 	define: {
 		// enable hydration mismatch details in production build
 		__VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'true',

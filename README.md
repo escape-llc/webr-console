@@ -1,16 +1,27 @@
-# Example of using webR in a Vue 3 application.
+# webR Console
 
-This repo contains an example of using webR as part of a Vue.js application, originally bootstrapped with [create-vue](https://github.com/vuejs/create-vue).
+We started with the example from web-R https://github.com/georgestagg/webr-vue-example.  It has several enhancements:
 
-TypeScript source code showing how to load webR so that it can be accessed globally in any component can be found in the file `src/main.ts`. An example of using webR in a component to produce output for display can be found in the file `src/components/WebREditor.vue`.
+* Use latest `0.4.0` of web-R.
+* Other tooling dependencies are upgraded.
+* Use [PrimeVue](https://primevue.org) UI Component library. 
+* Additional configuration of ACE editor (see below).
+* Support multiple plots.
+* Plots appear in a Gallery UI, with full-page image preview.
 
-In this example, webR is loaded into page and a Vue.js component presents an [Ace code editor](https://ace.c9.io/) to the user. The user may write R code in the editor, and click "Run Code" to run the R code in webR. Results are shown as if the user had entered the code at an R console.
+TypeScript source code showing how to load webR so that it can be accessed globally in any component is in `src/main.ts`. The primary webR Console component is in `src/components/WebREditor.vue`.
 
-If a user writes R code to produce a plot, they are rendered using webR's built in `canvas()` graphics device and shown on the page.
+This application consists of 3 panels:
 
-## Example
+* [Ace code editor](https://ace.c9.io/) Panel.
+  * Write R code in the editor, and click "Run". Results are shown in the Output Panel.
+* Output panel for R output.
+* Plot panel with a Gallery UI for plots. Plots are rendered using webR's built in `canvas()` graphics device.
+  * Panel is hidden until plots are generated.
 
-This example has been deployed to Netlify: https://webr-vue-example-editor.netlify.app/.
+## Example Deployment
+
+This example has been deployed to our website: https://escape-technology-llc.com/webr-console/index.html.
 
 ## Further information
 
